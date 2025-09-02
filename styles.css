@@ -845,3 +845,96 @@ button:hover {
   font-family: 'FKGroteskNeue';
   src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
 }
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
+
+.header-logo span {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 24px;
+}
+
+
+.header-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.footer-content a svg {
+  transition: transform 0.2s, filter 0.2s;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.footer-content a:hover svg {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+.subject-card .card-icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px auto;
+  filter: drop-shadow(0 2px 8px rgba(33,128,141,0.15));
+  transition: transform 0.2s;
+}
+.subject-card:hover .card-icon {
+  transform: scale(1.1) rotate(-2deg);
+}
+.site-info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(100deg,var(--color-primary) 50%,var(--color-surface) 100%);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin: 18px auto 14px auto;
+  max-width: 750px;
+}
+.info-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.about-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  object-fit: contain;
+}
+.site-info-section h2 {
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+.site-info-section p {
+  color: var(--color-text);
+  font-size: 17px;
+  line-height: 1.4;
+}
+:root {
+  --color-accent: #1DA1F2;
+  --color-accent-gradient: linear-gradient(90deg,#0077ff,#ba2bae);
+}
+.subject-card {
+  background: var(--color-accent-gradient);
+}
+footer {
+  background: var(--color-accent);
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+footer a:hover svg {
+  filter: brightness(2) drop-shadow(0 2px 10px #fff);
+}
+
