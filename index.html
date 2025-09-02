@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Preparation Quiz</title>
+    <title>StudyHub Pro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <div class="header-logo" onclick="goToHome()">
+            <div class="site-info-section">
+  <div class="info-content">
+    <img src="https://play-lh.googleusercontent.com/Fs4VB_jmvgSFpgNE2_Zyhb-FnPfmvZ2pYy9VwRPRLZrc-Hu0NHShOqhdYbsH13fAxJ2e" alt="Quiz Logo" class="about-logo" />
+    <div>
+      <h2>About Exam Preparation Quiz</h2>
+      <p>
+        Welcome to our modern Quiz Platform! <br>
+        Practice for competitive exams with interactive subject-wise tests, instant scoring, and adaptive progress tracking. <br>
+        Designed for learners aiming for success, our quizzes are smart, adaptive, and fun. Master topics with expert-level insights and continuous feedback.
+      </p>
+    </div>
+  </div>
+</div>
+
+     <img src="img.png" alt="Logo" />
+  <span>StudyHub Pro</span>
+</div>
+
         <!-- Home Page -->
         <div id="home-page" class="page active">
-            <h1>Exam Preparation Quiz</h1>
+            <h1>StudyHub Pro</h1>
             <div class="subjects-grid">
                 <div class="subject-card" onclick="selectSubject('quantitative')">
+                    <img src="https://as1.ftcdn.net/v2/jpg/05/51/43/56/1000_F_551435602_v0rxhHEIgbQNWozIjcgJOR2Nmp1SINMV.jpg" alt="Quantitative Icon" class="card-icon"/>
                     <h2>Quantitative Aptitude</h2>
                     <p>Mathematics and numerical ability</p>
                 </div>
                 <div class="subject-card" onclick="selectSubject('english')">
+                    <img src="https://thumbs.dreamstime.com/z/logo-english-school-subject-logo-english-school-subject-hand-drawn-icon-abc-title-english-emblem-pop-193403995.jpg" alt="English Icon" class="card-icon"/>
                     <h2>English</h2>
                     <p>Grammar, vocabulary, and comprehension</p>
                 </div>
                 <div class="subject-card" onclick="selectSubject('reasoning')">
+                    <img src="https://www.pennrose.com/media/nwpgnhka/learning-development-square.png" alt="Reasoning Icon" class="card-icon"/>
                     <h2>Reasoning</h2>
                     <p>Logical and analytical reasoning</p>
                 </div>
@@ -121,6 +143,27 @@
             <div id="review-container" class="review-container"></div>
         </div>
     </div>
+    <footer>
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Exam Preparation Quiz. All rights reserved.</p>
+    <p>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Follow us on Facebook">
+        <svg width="24" height="24" fill="#0077ff"><path d="M9 8H7v4H4V8H2V4h2V2h3v2h2v4z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Follow us on Instagram">
+        <svg width="24" height="24" fill="#ba2bae"><circle cx="12" cy="12" r="4"/><rect x="2" y="6" width="20" height="12" rx="6"/><circle cx="18" cy="6" r="2"/></svg>
+      </a>
+      <a href="https://www.twitter.com/" target="_blank" aria-label="Follow us on Twitter">
+        <svg width="24" height="24" fill="#1DA1F2"><path d="M8 19c8 0 12-6.5 12-12V5a9 9 0 01-2.5.7A4.48 4.48 0 0022 3.2a9.01 9.01 0 01-2.85 1.09A4.5 4.5 0 006 5.7v1C4.35 6.6 2.85 5.8 1.7 4.59c-.5.87-.5 2.1.32 2.79A4.51 4.51 0 003 11a12.85 12.85 0 01-9-4.5"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" aria-label="Follow us on LinkedIn">
+        <svg width="24" height="24" fill="#0A66C2"><rect x="2" y="2" width="20" height="20" rx="4"/><rect x="6" y="10" width="3" height="8"/><rect x="10" y="10" width="8" height="8"/><circle cx="7.5" cy="7.5" r="1"/></svg>
+      </a>
+    </p>
+  </div>
+</footer>
+
 
     <script src="quantitative.js"></script>
     <script src="english.js"></script>
