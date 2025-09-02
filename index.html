@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Preparation Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <h1>Exam Preparation Quiz</h1>
+            <div class="subjects-grid">
+                <div class="subject-card" onclick="selectSubject('quantitative')">
+                    <h2>Quantitative Aptitude</h2>
+                    <p>Mathematics and numerical ability</p>
+                </div>
+                <div class="subject-card" onclick="selectSubject('english')">
+                    <h2>English</h2>
+                    <p>Grammar, vocabulary, and comprehension</p>
+                </div>
+                <div class="subject-card" onclick="selectSubject('reasoning')">
+                    <h2>Reasoning</h2>
+                    <p>Logical and analytical reasoning</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subject Page -->
+        <div id="subject-page" class="page">
+            <button class="back-btn" onclick="goToHome()">← Back to Subjects</button>
+            <h1 id="subject-title"></h1>
+            <div id="chapters-grid" class="chapters-grid"></div>
+        </div>
+
+        <!-- Chapter Page -->
+        <div id="chapter-page" class="page">
+            <button class="back-btn" onclick="goToSubject()">← Back to Chapters</button>
+            <h1 id="chapter-title"></h1>
+            <div class="chapter-info">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Sets:</span>
+                        <span class="stat-value">5</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Questions per Set:</span>
+                        <span class="stat-value">20</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Time per Question:</span>
+                        <span class="stat-value">1 min</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pass Percentage:</span>
+                        <span class="stat-value">98%</span>
+                    </div>
+                </div>
+                <div class="sets-selection">
+                    <h3>Choose a Set:</h3>
+                    <div id="sets-grid" class="sets-grid"></div>
+                </div>
+                <div class="progress-section">
+                    <h3>Your Progress:</h3>
+                    <div id="progress-info" class="progress-info"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="page">
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <span id="current-question">Question 1 of 20</span>
+                    <span id="timer">20:00</span>
+                </div>
+                <button class="submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text"></h2>
+                <div id="options-container" class="options-container"></div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                <button id="next-btn" onclick="nextQuestion()">Next</button>
+            </div>
+            <div class="question-grid">
+                <h3>Questions:</h3>
+                <div id="question-numbers" class="question-numbers"></div>
+            </div>
+        </div>
+
+        <!-- Results Page -->
+        <div id="results-page" class="page">
+            <div class="results-container">
+                <h1>Quiz Results</h1>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <div class="score-details">
+                        <p>Correct: <span id="correct-count">0</span>/20</p>
+                        <p>Incorrect: <span id="incorrect-count">0</span>/20</p>
+                        <p>Time Taken: <span id="time-taken">0:00</span></p>
+                    </div>
+                </div>
+                <div id="result-status" class="result-status"></div>
+                <div class="action-buttons">
+                    <button id="review-btn" onclick="reviewAnswers()">Review Answers</button>
+                    <button id="retake-btn" onclick="retakeQuiz()">Retake Quiz</button>
+                    <button class="back-btn" onclick="goToChapter()">Back to Chapter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Page -->
+        <div id="review-page" class="page">
+            <button class="back-btn" onclick="goToResults()">← Back to Results</button>
+            <h1>Answer Review</h1>
+            <div id="review-container" class="review-container"></div>
+        </div>
+    </div>
+
+    <script src="quantitative.js"></script>
+    <script src="english.js"></script>
+    <script src="reasoning.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
